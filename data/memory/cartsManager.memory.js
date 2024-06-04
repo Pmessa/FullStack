@@ -1,17 +1,15 @@
-import { log } from "console";
 import crypto from "crypto";
 
 class CartsManager {
   static #carts = [];
   static #cartId = [];
 
-  create(data) {
-    console.log(data)
+  create(cart) {
     const cart = {
-      user_id: cart.user_id || crypto.randomBytes(12).toString("hex"),
-      product_id: cart.product_.id || crypto.randomBytes(12).toString("hex"),
-      quantity: cart.quantity || 1,
-      state: cart.state || "reserved",
+      user_id: data.id || crypto.randomBytes(12).toString("hex"),
+      product_id: data.id || crypto.randomBytes(12).toString("hex"),
+      quantity: data.id || 1,
+      state: data.id || "reserved",
     };
     if (!data.id) {
       throw new Error("Id is required to create a cart");
@@ -52,9 +50,9 @@ class CartsManager {
   destroy(id) {
     try {
       const cartToRemove = this.readOne(id);
-      const without = CartsManager.#carts.filter((each) => each.id !== id);
-      CartsManager.#carts = without;
-      console.log(without);
+      const within = cartsManager.#carts.filter((each) => each.id !== id);
+      cartsManager.#carts = within;
+      console.log(within);
       console.log("cart DELETED");
       return cartToRemove;
     } catch (error) {
@@ -80,18 +78,15 @@ class CartsManager {
   }
 }
 
-// Crear una instancia de CartstManager
-const cartsManager = new CartsManager();
-//console.log(data)
+// Crear una instancia de ProducstManager
+const cartsManager = new ProducstManager();
 
-// cartsManager.create({
-//   user_id:crypto.randomBytes(12).toString("hex"),
-//   product_id: crypto.randomBytes(12).toString("hex"),
-//   quantity:  1,
-//   state: "reserved",
-// });
-
-cartsManager.create({});
+cartsManager.create({
+  user_id: data.id,
+  product_id: data.id,
+  quantity: data.id || 1,
+  state: data.id || "reserved",
+});
 
 // Mostrar todos los carts
 console.log(cartsManager.read());
