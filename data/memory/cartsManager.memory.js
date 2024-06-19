@@ -5,6 +5,7 @@ class CartsManager {
   static #cartId = [];
 
   create(cart) {
+    console.log("console.log(create)" + cart)
     const cart = {
       user_id: data.id || crypto.randomBytes(12).toString("hex"),
       product_id: data.id || crypto.randomBytes(12).toString("hex"),
