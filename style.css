@@ -2,44 +2,82 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(134, 109, 102);
-}
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(134, 109, 102);
 }
 :root {
   --color-cicegroup: rgb(192, 55, 44);
   --box-shadow-color: rgba(0, 0, 0, 0.3);
 }
-.ciceGroup {
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  background-color: rgb(134, 109, 102);
+}
+.coenGroup{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.coenDiv{
+  display: flex;
+  flex-direction: column;
+}
+.commandGroup {
+  width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
   background-color: rgb(92, 127, 147);
   color: aliceblue;
-  max-width: 22rem;
+}
+.lineCoen{
+  display: flex;
+  flex-direction: column;
+}
+.endText {
+  padding: 0.5rem;
+  color: aliceblue;
+  writing-mode: vertical-rl;
+  font-size: 2rem;
 }
 .rolContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
+  text-align: center;
+  max-height: 10rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  box-shadow: 3px 3px 3px 3px var(--box-shadow-color);
+  padding: 0.3rem;
+}
+.ce{
   background: linear-gradient(
     to bottom,
     rgb(245, 109, 109),
-    rgba(245, 111, 111, 0.558)
+    rgba(245, 16, 16, 0.595)
   );
-  max-width: 20rem;
   color: aliceblue;
-  border-radius: 5px;
-  margin: 2rem;
-  box-shadow: 3px 3px 3px 3px var(--box-shadow-color);
-  padding: 1rem;
+}
+.rc{
+  background: linear-gradient(
+    to bottom,
+    rgb(109, 168, 245),
+    rgba(50, 16, 245, 0.595)
+  );
+  color: aliceblue;
+}
+.joen{
+  background: linear-gradient(
+    to bottom,
+    rgb(245, 109, 157),
+    rgba(132, 2, 130, 0.595)
+  );
+  color: aliceblue;
 }
 .rolTitle {
   background-color: transparent;
@@ -49,9 +87,37 @@ body {
 }
 label {
   background-color: transparent;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 option {
   background: aliceblue;
+}
+.optionSelect {
+  font-size: 12px;
+  background: aliceblue;
+  border-radius: 5px;
+}
+.selectedPerson{
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo{
+  padding: 5px;
+  height: 30px;
+}
+.externos{
+  display: flex;
+
+}
+.externos{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  background-color: #b2b26fb5;
+}
+.ext{
+  max-height:5rem;
 }
